@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "154345ad-d68c-4415-a9be-dd85c58ab5bd",
+		"name": "API-ATIVIDADE-PW3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ESPECIALIDADE",
+			"item": [
+				{
+					"name": "listarEspecialidade",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/especialidade/listarEspecialidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidade",
+								"listarEspecialidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarEspecialidadeID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/especialidade/listarEspecialidade/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidade",
+								"listarEspecialidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserirEspecialidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_especialidade\":\"CIRURGIÃO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/especialidade/cadastrarEspecialidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidade",
+								"cadastrarEspecialidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarEspecialidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"nome_especialidade\":\"NEURO\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/especialidade/alterarEspecialidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidade",
+								"alterarEspecialidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirEspcialidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/especialidade/excluirEspecialidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidade",
+								"excluirEspecialidade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MEDICO",
+			"item": [
+				{
+					"name": "cadastrarMedico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_medico\":\"WENDEL BATISTA\",\r\n    \"email_medico\" : \"wbatista@gmail.com\",\r\n    \"telefone_medico\": \"11910102326\",\r\n    \"celular_medico\" : \"11912342328\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medico/cadastrarMedico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medico",
+								"cadastrarMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarMedico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"nome_medico\":\"WENDEL BATISTA\",\r\n    \"email_medico\":\"wbatista@gmail.com\",\r\n    \"telefone_medico\":\"11910102326\",\r\n    \"celular_medico\":\"11912342328\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medico/editarMedico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medico",
+								"editarMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarMedico",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/medico/listarMedico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medico",
+								"listarMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarMedicoID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medico/listarMedico/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medico",
+								"listarMedico",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirMedico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medico/excluirMedico/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medico",
+								"excluirMedico",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
